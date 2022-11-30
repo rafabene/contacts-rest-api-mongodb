@@ -53,4 +53,4 @@ jobs:
           app-name: 'contacts-rest-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ED645F9E6E54498B8D617B1403535568 }}
-          package: '*/*.jar'
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/target/quarkus-app/'
