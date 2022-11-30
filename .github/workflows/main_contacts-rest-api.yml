@@ -25,12 +25,13 @@ jobs:
         run: mvn clean install
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: java-app
+          if-no-files-found: error
           path: |
-            '${{ github.workspace }}/target/quarkus-app/*.jar'
-            '${{ github.workspace }}/target/quarkus-app/lib/*'
+            ${{ github.workspace }}/target/quarkus-app/*.jar
+            ${{ github.workspace }}/target/quarkus-app/lib/*
 
   deploy:
     runs-on: ubuntu-latest
