@@ -17,7 +17,7 @@ import com.rafabene.data.Contact;
 public class ContactService {
 
     @Inject
-    private MongoClient mongoClient;
+    MongoClient mongoClient;
 
     public List<Contact> list(){
         List<Contact> list = new ArrayList<>();

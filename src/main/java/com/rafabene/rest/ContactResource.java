@@ -15,7 +15,7 @@ public class ContactResource {
     
 
     @Inject
-    private ContactService contactService;
+    ContactService contactService;
 
     @GET
     public List<Contact> list(){
